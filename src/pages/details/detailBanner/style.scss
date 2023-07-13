@@ -1,0 +1,223 @@
+@import '../../../../minxin.scss';
+
+.detailBanner {
+    width: 100%;
+    // height: 100%;
+
+    .imgBanner {
+        width: 100%;
+        height: 465px;
+
+        @include sm {
+            height: 500px;
+        }
+
+        .container {
+            background-image: linear-gradient(to right, rgba(31.5, 31.5, 31.5, 1) calc((50vw - 170px) - 340px), rgba(31.5, 31.5, 31.5, 0.84) 50%, rgba(31.5, 31.5, 31.5, 0.84) 100%);
+            height: 100%;
+            width: 100%;
+            position: relative;
+
+            .contentWrapper {
+                .contentContainer {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+
+                    @include sm {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 20px;
+                        position: relative;
+
+                    }
+
+                    .left-content {
+                        height: 100%;
+                        border-radius: 12px;
+                        width: 300px;
+                        margin: 0 auto;
+
+                        padding: 80px 0 20px 0px;
+
+                        @include sm {
+                            margin: 0;
+                        }
+
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                            border-radius: 12px;
+                        }
+                    }
+
+                    .right-content {
+                        color: #fff;
+                        flex: 1;
+                        flex-direction: column;
+                        gap: 5px;
+                        display: flex;
+                        padding: 20px 0;
+                        position: relative;
+                        height: 100%;
+
+                        @include sm {
+                            padding: 80px 0 0 20px;
+
+                        }
+
+                        .title {
+                            font-weight: 400;
+                        }
+
+                        .facts {
+                            display: flex;
+                            gap: 15px;
+                            font-weight: 400;
+                            height: 30px;
+                            opacity: 0.8;
+                            align-items: center;
+                            position: relative;
+
+                            span {
+                                height: 100%;
+                                text-align: center;
+                                display: flex;
+                                align-items: center;
+                            }
+
+                            .genres {
+                                display: flex;
+                                gap: 10px;
+                                position: relative;
+
+                                &::before {
+                                    font-size: 1.1em;
+                                    line-height: 1;
+                                    content: "•";
+                                    width: 100%;
+                                    height: 100%;
+                                    position: absolute;
+                                    top: 0px;
+                                    left: -7px;
+                                    display: inline-flex;
+                                    align-content: center;
+                                    align-items: center;
+                                    z-index: -1;
+                                }
+                            }
+
+                            .certification {
+                                border: 1px solid rgba(255, 255, 255, 0.6);
+                                color: rgba(255, 255, 255, 0.6);
+                                padding: 0 1px;
+                            }
+
+                            .runtime {
+                                position: relative;
+
+                                &::before {
+                                    font-size: 1.1em;
+                                    line-height: 1;
+                                    content: "•";
+                                    width: 100%;
+                                    height: 100%;
+                                    position: absolute;
+                                    top: 0px;
+                                    left: -7px;
+                                    display: inline-flex;
+                                    align-content: center;
+                                    align-items: center;
+                                    z-index: -1;
+                                }
+                            }
+                        }
+
+                        .playtrailerVd {
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            background: #032541;
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            justify-content: center;
+                            margin-top: 20px;
+                            position: absolute;
+                            top: -50%;
+                            right: 45%;
+                            opacity: 0.6;
+
+                            &:hover {
+                                color: var(--pink);
+                            }
+
+                            @include sm {
+                                top: 165px;
+                                left: 15px;
+                                opacity: 1;
+                            }
+
+                            svg {
+                                font-size: 50px;
+                                opacity: 0.9;
+                            }
+
+                            &:hover {
+                                opacity: 1;
+                                color: var(--pink);
+                            }
+                        }
+
+                        .overview {
+                            position: absolute;
+                            display: flex;
+                            gap: 10px;
+                            flex-direction: column;
+                            line-height: 1.4;
+                            justify-content: center;
+                            margin-top: 100px;
+                            @include ellipsis(5);
+
+                            @include sm {
+                                margin-top: 160px;
+
+                            }
+
+                            @include md {
+                                @include ellipsis(5);
+
+                            }
+
+                        }
+
+                        .listInfomation {
+                            position: absolute;
+                            bottom: 44%;
+                            font-size: 17px;
+
+
+                            @include sm {
+                                bottom: 18%;
+                            }
+
+                            @include md {
+                                bottom: 25%;
+                            }
+
+                            .info {
+                                display: flex;
+                                gap: 20px;
+                                // @include ellipsis(1);
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

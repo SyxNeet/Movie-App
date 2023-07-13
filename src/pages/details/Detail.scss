@@ -1,0 +1,40 @@
+@import '../../../minxin.scss';
+
+.detail {
+
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+
+
+
+    .recommendation {
+        display: none;
+
+        @include ssm {
+            display: block;
+            position: relative;
+            top: 220px;
+        }
+
+        @include sm {
+            top: 0;
+        }
+    }
+
+    .similar {
+        display: none;
+
+        @include ssm {
+            display: block;
+            position: relative;
+            top: 220px;
+        }
+
+        @include sm {
+            top: 0;
+        }
+    }
+}

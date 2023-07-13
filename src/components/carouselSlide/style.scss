@@ -1,0 +1,48 @@
+@import '../../../minxin.scss';
+
+.card-item {
+    background: #1a242f;
+    cursor: pointer;
+    height: 100%;
+    transition: all 0.3s;
+    min-height: 430px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: all 0.3s;
+
+    }
+}
+
+.card-top {
+    height: 300px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+}
+
+.card-bottom {
+    padding: 30px;
+}
+
+.card-info {
+    color: white;
+
+    h5 {
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        @include ellipsis(1);
+    }
+}
+
+.slick-track {
+    display: flex;
+    gap: 15px;
+}

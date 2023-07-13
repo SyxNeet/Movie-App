@@ -1,0 +1,27 @@
+@import '../../../minxin.scss';
+
+#currentTime {
+    background: transparent;
+    background-color: transparent;
+    animation: led 1s infinite;
+    display: none;
+    margin-bottom: 18px;
+
+    @include ssm {
+        display: flex;
+    }
+}
+
+@keyframes led {
+    0% {
+        box-shadow: 0 0 10px 0 #ea6932;
+    }
+
+    50% {
+        box-shadow: 0 0 20px 5px #ea6932;
+    }
+
+    100% {
+        box-shadow: 0 0 10px 0 #ea6932;
+    }
+}

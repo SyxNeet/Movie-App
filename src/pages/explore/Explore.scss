@@ -1,0 +1,26 @@
+@import '../../../minxin.scss';
+
+.explore {
+    .img {
+        border-radius: 12px;
+        transition: all 0.3s;
+
+        &:hover {
+            scale: 1.1;
+        }
+    }
+
+    .ant-skeleton-title {
+        background: linear-gradient(90deg, rgba(0, 0, 0.4, 0.3) 20%, rgba(255, 255, 255, 0.12) 37%, rgba(0, 0, 0, 0.15) 63%);
+    }
+
+    .selected {
+        @media only screen and (max-width:500px) {
+            width: 100% !important;
+        }
+
+        @include ssm {
+            width: 200px;
+        }
+    }
+}
